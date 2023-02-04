@@ -7,7 +7,7 @@ function App() {
   const [small, setSmall] = useState(false)
   const toggle = () =>{
     if(name==="Ульяна"){
-      setName("С колбаской")
+      setName("С сиром")
       setSmall(true)
     }
     else{
