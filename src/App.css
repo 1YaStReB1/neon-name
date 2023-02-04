@@ -10,7 +10,7 @@ body{
 }
 div{
   color:rgb(255,255,255,0.8);
-  font-size:10rem;
+  font-size: 5rem;
   letter-spacing:3rem;
   font-family: 'Rajdhani', sans-serif;
   text-shadow: 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 60px cyan,0px 0px 80px cyan, 0px 0px 100px cyan;
@@ -18,40 +18,32 @@ div{
 }
 
 .sm{
-  font-size: 5rem;
+  
 }
 
 @media  screen and (max-width: 1100px) {
   div{
-    font-size: 8rem;
-  }
-
-  .sm{
     font-size: 3rem;
     letter-spacing:2rem;
   }
+
+  
 }
 
 @media  screen and (max-width: 750px) {
   div{
-    font-size: 6rem;
-    letter-spacing:2rem;
-  }
-
-  .sm{
     font-size: 2.5rem;
     letter-spacing:1.7rem;
   }
+
+  
 }
 
 @media  screen and (max-width: 630px) {
   div{
-    font-size: 2.8rem;
-    letter-spacing:1.5rem;
-  }
-
-  .sm{
     font-size: 1.3rem;
     letter-spacing:.8rem;
   }
+
+  
 }
