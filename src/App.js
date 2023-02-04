@@ -3,17 +3,15 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [name, setName] = useState("Ульяна")
+  const text = ["Ульяна", "С сиром", "И с черным" , "хлебом" , "И в микроволновку", "На 40 сек", "ммм"]
+  const [name, setName] = useState(0)
   const [small, setSmall] = useState(false)
   const toggle = () =>{
-    if(name==="Ульяна"){
-      setName("С сиром")
-      setSmall(true)
-    }
-    else{
-      setName("Ульяна")
-      setSmall(false)
-    }
+    if(name==text.length)
+      setName(0)
+    else
+      setName(prev => prev +1)
+    
   }
 useEffect(()=>{
   window.addEventListener("click", toggle)
@@ -24,7 +22,7 @@ useEffect(()=>{
 
   return (
     <div  className={`App ${small && "sm"}`}>
-     {name}
+     {text[name]}
     </div>
   );
 }
