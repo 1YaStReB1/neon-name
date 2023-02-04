@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [name, setName] = useState("Ульяна")
+  const [small, setSmall] = useState(false)
+  const toggle = () =>{
+    if(name==="Ульяна"){
+      setName("С колбаской")
+      setSmall(true)
+    }
+    else{
+      setName("Ульяна")
+      setSmall(false)
+    }
+  }
+useEffect(()=>{
+  window.addEventListener("click", toggle)
+  return  () => {
+    window.removeEventListener("click", toggle)
+  }
+},[toggle])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div  className={`App ${small && "sm"}`}>
+     {name}
     </div>
   );
 }
